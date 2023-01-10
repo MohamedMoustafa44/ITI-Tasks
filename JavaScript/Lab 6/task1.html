@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+
+    <style>
+      body {
+        margin: 70px 300px;
+        font-family: Andalus;
+        font-size: x-large;
+        font-weight: bold;
+        background-color: lightGrey;
+      }
+
+      [type="text"],
+      [type="button"] {
+        font-family: "Century Gothic";
+        font-size: large;
+      }
+
+      table {
+        width: 400px;
+      }
+      tr{
+        margin: 5px;
+      }
+
+      span {
+        color: red;
+        display: none;
+      }
+      
+
+
+      .SD {
+        background-color: lightpink;
+      }
+
+      .OS {
+        background-color: lightyellow;
+      }
+
+      .EL {
+        background-color: lightskyblue;
+      }
+    </style>
+    <script src="js/task1.js"></script>
+    <script src="js/helper.js"></script>
+  </head>
+
+  <body>
+    <form>
+      <table>
+        <tr>
+          <td colspan="2">
+            Department:
+            <input
+              type="radio"
+              name="Department"
+              value="SD"
+              checked="checked"
+            />SD <input type="radio" name="Department" value="OS" />OS
+            <input type="radio" name="Department" value="EL" />EL
+          </td>
+        </tr>
+        <tr>
+          <td>
+            StudentName<input type="text" name="studentName" />
+          </td>
+          <td><span id="nameError"></span></td>
+        </tr>
+        <tr>
+          <td>
+            StudentGrade<input type="text" name="studentGrade" value="0" />
+          </td>
+          <td><span id="gardeError">should be a number (0:100)</span></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" value="Add" /></td>
+        </tr>
+        <tr>
+          <td>
+            Sort
+            <select>
+              <option selected></option>
+              <option value="name">Name</option>
+              <option value="grade">Grade</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Filter:
+            <select>
+              <option value="all" selected>All</option>
+              <option value="success">Success</option>
+              <option value="fail">Fail`</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <table></table>
+  </body>
+</html>

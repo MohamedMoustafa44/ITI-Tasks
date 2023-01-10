@@ -1,0 +1,17 @@
+div{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-color: aqua;
+    margin: 2px;
+    
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
