@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <button onclick="Heavy()">Heavy task</button>
+    <button onclick="Light()">Light task</button>
+    <script>
+        let worker = new Worker("Task3.js");
+        function Heavy(){
+            // let sum = 0;
+            // for(let i = 0; i < 9999999999; i++){
+            //     sum += i;
+            // }
+            // alert(sum);
+            worker.postMessage("");
+
+        }
+        worker.onmessage = function (message) {
+        alert(message.data);
+      };
+        function Light(){
+            if(document.body.style.background !== "red"){
+                document.body.style.background = "red";
+            }
+            else{
+                document.body.style.background = "yellow";
+            }
+        }
+    </script>
+</body>
+</html>
