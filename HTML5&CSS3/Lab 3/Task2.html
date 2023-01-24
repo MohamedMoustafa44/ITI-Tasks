@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        input[type = text]:valid, input[type = email]:valid{
+            border: 2px solid green;
+        }
+
+        input[type = text]:valid+div, input[type = email]:valid+div{
+            visibility: hidden;
+        }
+
+        input[type = text]:invalid, input[type = email]:invalid{
+            border: 2px solid red;
+        }
+
+        input[type = text]:invalid+div, input[type = email]:invalid+div{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h1>Change Email Address</h1>
+        <input type="text" name="userName" id="user" placeholder="Username" required pattern="[a-zA-Z0-9\s]+"">
+        <div>This field must be characters, spaces and numbers</div>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <div>You have to add @example.com</div>
+        <input type="submit" value="Change">
+    </form>
+</body>
+</html>
